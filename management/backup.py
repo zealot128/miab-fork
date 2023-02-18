@@ -233,7 +233,7 @@ def get_duplicity_additional_args(env):
 		from urllib.parse import urlsplit, urlunsplit
 		target = urlsplit(config["target"])
 		endpoint_url = urlunsplit(("https", target.netloc, '', '', ''))
-		return ["--s3-endpoint-url",  endpoint_url]
+		return ["--s3-endpoint-url",  endpoint_url, "--s3-region-name", "nl-ams"]
 
 	return []
 
